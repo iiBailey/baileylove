@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的表白</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    background-color: #F3E7E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    background-color: #FFB6C1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.heart {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    transform: rotate(-45deg);
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+}
+
+.heart::before {
+    left: 50px;
+    border-radius: 100px 100px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+}
+
+.heart::after {
+    top: 50px;
+    border-radius: 100px;
+    transform: rotate(-45deg);
+    transform-origin: 100px 0;
+}
+
+h1 {
+    color: #FF1493;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+button {
+    background-color: #FF69B4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.secret-message {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart"></div>
+        <h1>千夜、冷瞳</h1>
+        <p>纵有千古，横有八荒，前途似海，来日方长</p>
+        <button id="revealButton">答案说明所有</button>
+        <div class="secret-message hidden">
+            <p>天青色等烟雨</p>
+        </div>
+    </div>
+    <script>document.getElementById('revealButton').addEventListener('click', function () {
+        document.querySelector('.secret-message').style.display = 'block';
+        this.style.display = 'none';
+    });</script>
+</body>
+</html>
