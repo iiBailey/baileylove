@@ -349,6 +349,8 @@
   margin-top: 20px;
   margin-left: 10%;
   position: absolute;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
 }
 .recommend1 li:first-child{
   -webkit-animation: show .5s ease-in-out 0s forwards;
