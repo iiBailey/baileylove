@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     Index = (Index + 1) % 4; 
     banners.style.backgroundImage = "url('" + images[Index] + "')";
   }
-  setInterval(nextSlide, 2000);
+  setInterval(nextSlide, 5000);
 });
 
 
